@@ -1,81 +1,4 @@
----
-title: "Simulation Challenge"
-subtitle: "Starter Template with To-Dos"
-jupyter: python3
-format:
-  html: default
-execute:
-  echo: false
-  eval: true
----
 
-# 🎲 Simulation Challenge - Starter Template
-
-:::: {.callout-important}
-## 📋 What You Need To Do
-
-- [ ] Fork [this repository](https://github.com/flyaflya/simulationChallenge) to create `simulationChallenge` in your GitHub
-- [ ] Clone locally and open in Cursor
-- [ ] Write your analysis in this `index.qmd`
-- [ ] Render to HTML (`quarto render` or Render button)
-- [ ] Push HTML to your repo and enable GitHub Pages
-- [ ] Share your site: `https://[your-username].github.io/simulationChallenge/`
-::::
-
-:::: {.callout-note}
-## 🐍 Python Environment Setup
-
-Before rendering, create a fresh virtual environment and install the required packages:
-
-1. Press `Ctrl+Shift+P` to open the Command Palette
-2. Type **"Python: Select Interpreter"** and select it
-3. Click **"+ Create Virtual Environment..."**
-4. Choose **Venv**
-5. Select your Python installation (e.g., Python 3.12)
-6. Wait for the environment to be created and activated
-
-Then open a terminal and install dependencies:
-
-**Windows:**
-```bash
-py -m pip install jupyter matplotlib pandas daft-pgm
-```
-
-**Mac:**
-```bash
-python3 -m pip install jupyter matplotlib pandas daft-pgm
-```
-
-This ensures you have everything needed for Quarto rendering and the DAG visualizations.
-::::
-
-:::: {.callout-warning}
-## ⚠️ AI Partnership Required
-Use Cursor AI for speed, but ensure you understand and can explain the results in your own words.  Verify cursor's calculations as investment simulation is tricky.
-::::
-
-:::: {.callout-important}
-## 📊 Grading Criteria
-
-- **Sections 1–4:** Required. These sections can earn up to **90%** of the grade.
-- **Sections 5–6:** Optional stretch. Strong, well-supported work here can bring your score up to **100%**.
-
-**Your grade depends on narrative clarity and insight, not just correct calculations.** Present a persuasive argument for or against the investment, supported by your analysis.
-::::
-
-:::: {.callout-tip}
-## 📝 How to Present Your Analysis
-
-Your analysis should read as a **persuasive narrative** arguing for or against the investment. Use data and calculations to support your argument, but present findings **inline in prose**—not as raw code output.
-
-- **Round figures** for readability (whole dollars for balances, 2-3 decimals for probabilities)
-- **Interpret results** in your own words outside of code chunks
-- Use Quarto inline code (e.g., `` `{{python}} round(ev, 0)` ``) or type values directly
-
-**Example:** Instead of printing `36000.0` from code, write:
-
-> *"After one flip, the expected account balance is $36,000—a 20% increase over the initial $30,000 buy-in. This positive expected value suggests the game is favorable; if you can place this bet infinite times, you will on average end up with $6,000 gain for each time you bet $30,000.  Note: this is an interpretation for a slighlty different game."*
-::::
 
 ## The Investment Game (Brief)
 
@@ -246,16 +169,20 @@ median_balance = round(np.median(final_balances))
 prob_profit = round(np.mean(final_balances > buy_in), 3)
 
 
-# histogram
-fig, ax = plt.subplots()
+# Very simple & direct: histogram + one参考线
+fig, ax = plt.subplots(figsize=(7, 4))
 
-ax.hist(final_balances, bins=20)
-ax.axvline(buy_in)
+# 为了让 30,000 那条线更明显，只看一个合理区间
+x_max = np.percentile(final_balances, 95)  # 覆盖大部分模拟结果
 
-ax.set_title("Distribution of Final Balances (100 Simulations)")
+ax.hist(final_balances, bins=20, range=(0, x_max), color="steelblue", alpha=0.7, edgecolor="black")
+ax.axvline(buy_in, color="coral", linestyle="--", linewidth=2, label=f"Initial ${buy_in:,}")
+
 ax.set_xlabel("Final Balance ($)")
-ax.set_ylabel("Frequency")
-
+ax.set_ylabel("Number of simulations")
+ax.set_title("Distribution of Final Balances (100 Simulations)")
+ax.legend(loc="upper right")
+plt.tight_layout()
 plt.show()
 
 ```
@@ -266,17 +193,6 @@ Across 100 simulations, the typical outcome is much lower than the average resul
 Report the probability that your final balance exceeds $30,000. Interpret what this probability means for your investment decision—does this change your recommendation from Section 1?
 
 The probability of ending with more than $30,000 is approximately 23%, meaning that most outcomes result in a loss despite the positive expected value. This suggests that the game is not attractive from a practical standpoint, and I would not recommend investing based on the low likelihood of success.
-
-```{python}
-
-#| label: q4-prob-original-py
-
-# Using the 100 simulations, estimate P(final > $30,000).
-# Round the probability to 2-3 decimal places.
-# Present this result OUTSIDE this chunk in narrative form.
-# Interpret what this probability means for your investment decision.
-
-```
 
 ### 5) Modified Strategy (Bet Exactly 25% Each Round)
 
@@ -382,27 +298,3 @@ When only 25% of the balance is risked each round, the outcomes become much more
 Explain what the Kelly Criterion is and how it relates to the modified strategy from Section 5. Does the Kelly Criterion support your recommendation?
 
 The Kelly Criterion is a rule for deciding how much of your wealth to risk in a repeated gamble in order to maximize long-term growth. Instead of betting the entire balance, it recommends betting only a fraction of your capital based on the odds and payoff. This idea is similar to the modified strategy in Section 5, where only 25% of the balance is exposed each round rather than the full account. Limiting the fraction at risk reduces volatility and helps avoid large losses that can damage long-term growth. Therefore, the Kelly Criterion supports the modified strategy and reinforces the recommendation to avoid betting the entire balance each round.
-
-## Professional Presentation
-
-- **Clear narrative:** tell the story succinctly (aim for a 1–5 minute read)
-- **Focus on insights:** risk profiles, counter-intuitive results, practical implications
-- **Professional style:** concise writing, clean visuals, hide code where appropriate (`echo: false`)
-- **Human interpretation:** explain what results mean for real decisions
-
-## Submission Checklist ✅
-
-- [ ] Quarto document written with narrative and results
-- [ ] Rendered to HTML successfully
-- [ ] Repository `simulationChallenge` created on GitHub
-- [ ] HTML committed and pushed
-- [ ] GitHub Pages enabled (Deploy from a branch → main → /(root))
-- [ ] Site accessible at `https://[your-username].github.io/simulationChallenge/`
-
-## Tips
-
-- Set random seeds for reproducibility
-- Use object-oriented plotting with `matplotlib`
-- Keep figures readable and labeled; prefer professional styling
-- Commit early and often; render locally before pushing
-

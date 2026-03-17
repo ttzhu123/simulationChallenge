@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Simulation Challenge</title>
+<title>index</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,41 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -82,8 +47,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Simulation Challenge</h1>
-<p class="subtitle lead">Starter Template with To-Dos</p>
+<h1 class="title">The Investment Game (Brief)</h1>
 </div>
 
 
@@ -100,109 +64,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="simulation-challenge---starter-template" class="level1">
-<h1>🎲 Simulation Challenge - Starter Template</h1>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Important</span>📋 What You Need To Do
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul class="task-list">
-<li><label><input type="checkbox">Fork <a href="https://github.com/flyaflya/simulationChallenge">this repository</a> to create <code>simulationChallenge</code> in your GitHub</label></li>
-<li><label><input type="checkbox">Clone locally and open in Cursor</label></li>
-<li><label><input type="checkbox">Write your analysis in this <code>index.qmd</code></label></li>
-<li><label><input type="checkbox">Render to HTML (<code>quarto render</code> or Render button)</label></li>
-<li><label><input type="checkbox">Push HTML to your repo and enable GitHub Pages</label></li>
-<li><label><input type="checkbox">Share your site: <code>https://[your-username].github.io/simulationChallenge/</code></label></li>
-</ul>
-</div>
-</div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>🐍 Python Environment Setup
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Before rendering, create a fresh virtual environment and install the required packages:</p>
-<ol type="1">
-<li>Press <code>Ctrl+Shift+P</code> to open the Command Palette</li>
-<li>Type <strong>“Python: Select Interpreter”</strong> and select it</li>
-<li>Click <strong>“+ Create Virtual Environment…”</strong></li>
-<li>Choose <strong>Venv</strong></li>
-<li>Select your Python installation (e.g., Python 3.12)</li>
-<li>Wait for the environment to be created and activated</li>
-</ol>
-<p>Then open a terminal and install dependencies:</p>
-<p><strong>Windows:</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">py</span> <span class="at">-m</span> pip install jupyter matplotlib pandas daft-pgm</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p><strong>Mac:</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> <span class="at">-m</span> pip install jupyter matplotlib pandas daft-pgm</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>This ensures you have everything needed for Quarto rendering and the DAG visualizations.</p>
-</div>
-</div>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Warning</span>⚠️ AI Partnership Required
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Use Cursor AI for speed, but ensure you understand and can explain the results in your own words. Verify cursor’s calculations as investment simulation is tricky.</p>
-</div>
-</div>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Important</span>📊 Grading Criteria
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li><strong>Sections 1–4:</strong> Required. These sections can earn up to <strong>90%</strong> of the grade.</li>
-<li><strong>Sections 5–6:</strong> Optional stretch. Strong, well-supported work here can bring your score up to <strong>100%</strong>.</li>
-</ul>
-<p><strong>Your grade depends on narrative clarity and insight, not just correct calculations.</strong> Present a persuasive argument for or against the investment, supported by your analysis.</p>
-</div>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>📝 How to Present Your Analysis
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Your analysis should read as a <strong>persuasive narrative</strong> arguing for or against the investment. Use data and calculations to support your argument, but present findings <strong>inline in prose</strong>—not as raw code output.</p>
-<ul>
-<li><strong>Round figures</strong> for readability (whole dollars for balances, 2-3 decimals for probabilities)</li>
-<li><strong>Interpret results</strong> in your own words outside of code chunks</li>
-<li>Use Quarto inline code (e.g., <code>`{python} round(ev, 0)`</code>) or type values directly</li>
-</ul>
-<p><strong>Example:</strong> Instead of printing <code>36000.0</code> from code, write:</p>
-<blockquote class="blockquote">
-<p><em>“After one flip, the expected account balance is $36,000—a 20% increase over the initial $30,000 buy-in. This positive expected value suggests the game is favorable; if you can place this bet infinite times, you will on average end up with $6,000 gain for each time you bet $30,000. Note: this is an interpretation for a slighlty different game.”</em></p>
-</blockquote>
-</div>
-</div>
-<section id="the-investment-game-brief" class="level2">
-<h2 class="anchored" data-anchor-id="the-investment-game-brief">The Investment Game (Brief)</h2>
 <p>You have the opportunity to buy-in to this game next week with $30,000. Your job is to analyze the potential outcomes of the game and communicate why you should or should not buy-in.</p>
 <p>Each year after buy-in you flip a fair coin:</p>
 <ul>
@@ -228,7 +89,6 @@ Figure&nbsp;1: Generative DAG model for the investment game showing how wealth e
 </div>
 </div>
 </section>
-</section>
 <section id="analysis-tasks-fill-these-in" class="level2">
 <h2 class="anchored" data-anchor-id="analysis-tasks-fill-these-in">Analysis Tasks (Fill These In)</h2>
 <section id="expected-value-after-1-flip" class="level3">
@@ -239,7 +99,7 @@ Figure&nbsp;1: Generative DAG model for the investment game showing how wealth e
 <section id="single-simulation-over-time-narrative-plot" class="level3">
 <h3 class="anchored" data-anchor-id="single-simulation-over-time-narrative-plot">2) Single Simulation Over Time (Narrative + Plot)</h3>
 <p>Narrate and visualize what happens to your account balance over the course of one simulation run. Describe the trajectory and state whether you would be satisfied with this particular outcome. Explain your reasoning.</p>
-<div id="f403e57c" class="cell" data-execution_count="4">
+<div id="a674191f" class="cell" data-execution_count="4">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -253,11 +113,11 @@ Figure&nbsp;1: Generative DAG model for the investment game showing how wealth e
 <section id="simulations-distribution-of-final-balances" class="level3">
 <h3 class="anchored" data-anchor-id="simulations-distribution-of-final-balances">3) 100 Simulations: Distribution of Final Balances</h3>
 <p>Describe the distribution of final account balances across 100 simulations. Report the mean, median, and the probability of ending with more than your initial $30,000. Given these results, would you be satisfied with the likely outcomes? Explain your reasoning.</p>
-<div id="208d901a" class="cell" data-execution_count="5">
+<div id="8cd2a60e" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/cell-6-output-1.png" width="585" height="449" class="figure-img"></p>
+<p><img src="index_files/figure-html/cell-6-output-1.png" width="661" height="374" class="figure-img"></p>
 </figure>
 </div>
 </div>
@@ -272,18 +132,18 @@ Figure&nbsp;1: Generative DAG model for the investment game showing how wealth e
 <section id="modified-strategy-bet-exactly-25-each-round" class="level3">
 <h3 class="anchored" data-anchor-id="modified-strategy-bet-exactly-25-each-round">5) Modified Strategy (Bet Exactly 25% Each Round)</h3>
 <p>Instead of having the full balance at risk with each coin flip, assume only 25% of your balance is gambled each year. Compare this modified strategy to the original game: Which is riskier? Which has better upside? Which strategy would you recommend and why?</p>
-<div id="c5f21fc0" class="cell" data-execution_count="7">
+<div id="f891899a" class="cell" data-execution_count="6">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/cell-8-output-1.png" width="1141" height="470" class="figure-img"></p>
+<p><img src="index_files/figure-html/cell-7-output-1.png" width="1141" height="470" class="figure-img"></p>
 </figure>
 </div>
 </div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/cell-8-output-2.png" width="514" height="357" class="figure-img"></p>
+<p><img src="index_files/figure-html/cell-7-output-2.png" width="514" height="357" class="figure-img"></p>
 </figure>
 </div>
 </div>
@@ -324,7 +184,6 @@ Figure&nbsp;1: Generative DAG model for the investment game showing how wealth e
 <li>Keep figures readable and labeled; prefer professional styling</li>
 <li>Commit early and often; render locally before pushing</li>
 </ul>
-</section>
 </section>
 
 </main>
