@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.8.27">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -61,14 +61,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="index_files/libs/clipboard/clipboard.min.js"></script>
 <script src="index_files/libs/quarto-html/quarto.js" type="module"></script>
 <script src="index_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="index_files/libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="index_files/libs/quarto-html/popper.min.js"></script>
 <script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
 <script src="index_files/libs/quarto-html/anchor.min.js"></script>
 <link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="index_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="index_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="index_files/libs/bootstrap/bootstrap-bb462d781dde1847d9e3ccf7736099dd.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="index_files/libs/bootstrap/bootstrap-d6a003b94517c951b2d65075d42fb01b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 
 
 </head>
@@ -107,7 +108,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-📋 What You Need To Do
+<span class="screen-reader-only">Important</span>📋 What You Need To Do
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -127,7 +128,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-🐍 Python Environment Setup
+<span class="screen-reader-only">Note</span>🐍 Python Environment Setup
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -142,9 +143,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ol>
 <p>Then open a terminal and install dependencies:</p>
 <p><strong>Windows:</strong></p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">py</span> <span class="at">-m</span> pip install jupyter matplotlib pandas daft-pgm</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">py</span> <span class="at">-m</span> pip install jupyter matplotlib pandas daft-pgm</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Mac:</strong></p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> <span class="at">-m</span> pip install jupyter matplotlib pandas daft-pgm</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> <span class="at">-m</span> pip install jupyter matplotlib pandas daft-pgm</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>This ensures you have everything needed for Quarto rendering and the DAG visualizations.</p>
 </div>
 </div>
@@ -154,7 +155,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-⚠️ AI Partnership Required
+<span class="screen-reader-only">Warning</span>⚠️ AI Partnership Required
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -167,7 +168,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-📊 Grading Criteria
+<span class="screen-reader-only">Important</span>📊 Grading Criteria
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -184,7 +185,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-📝 How to Present Your Analysis
+<span class="screen-reader-only">Tip</span>📝 How to Present Your Analysis
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -233,26 +234,59 @@ Figure&nbsp;1: Generative DAG model for the investment game showing how wealth e
 <section id="expected-value-after-1-flip" class="level3">
 <h3 class="anchored" data-anchor-id="expected-value-after-1-flip">1) Expected Value After 1 Flip</h3>
 <p>Explain whether the expected value of your account balance after one flip is greater than, equal to, or less than $30,000. What is the gain in expected value as a percentage of your buy-in? Based on this simple analysis, state whether you would recommend buying into the game and why.</p>
+<p>After one flip, the expected account balance is $31,500, which represents a 5% increase over the initial $30,000 investment. This positive expected value suggests that the game appears favorable in the short run, as the average outcome of a single play results in a gain.</p>
 </section>
 <section id="single-simulation-over-time-narrative-plot" class="level3">
 <h3 class="anchored" data-anchor-id="single-simulation-over-time-narrative-plot">2) Single Simulation Over Time (Narrative + Plot)</h3>
 <p>Narrate and visualize what happens to your account balance over the course of one simulation run. Describe the trajectory and state whether you would be satisfied with this particular outcome. Explain your reasoning.</p>
+<div id="a5dddaa5" class="cell" data-execution_count="4">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/cell-5-output-1.png" width="618" height="449" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>In one simulation, the account balance fluctuates significantly over time, reflecting both large gains and losses from the coin flips. Despite this volatility, the balance eventually grows to about $128,225, which is well above the initial investment. While this outcome is favorable, the large swings along the way highlight that the investment is highly unpredictable and risky.</p>
 </section>
 <section id="simulations-distribution-of-final-balances" class="level3">
 <h3 class="anchored" data-anchor-id="simulations-distribution-of-final-balances">3) 100 Simulations: Distribution of Final Balances</h3>
 <p>Describe the distribution of final account balances across 100 simulations. Report the mean, median, and the probability of ending with more than your initial $30,000. Given these results, would you be satisfied with the likely outcomes? Explain your reasoning.</p>
+<div id="791336d9" class="cell" data-execution_count="5">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/cell-6-output-1.png" width="585" height="449" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Across 100 simulations, the typical outcome is much lower than the average result. While the average final balance is very high due to a few extreme successes, most outcomes fall well below the initial $30,000 investment. In fact, only about 23% of simulations end with a gain, indicating that the majority of outcomes result in a loss.</p>
 </section>
 <section id="probability-balance-30000-at-age-75-original-game" class="level3">
 <h3 class="anchored" data-anchor-id="probability-balance-30000-at-age-75-original-game">4) Probability Balance &gt; $30,000 at Age 75 (Original Game)</h3>
 <p>Report the probability that your final balance exceeds $30,000. Interpret what this probability means for your investment decision—does this change your recommendation from Section 1?</p>
+<p>The probability of ending with more than $30,000 is approximately 23%, meaning that most outcomes result in a loss despite the positive expected value. This suggests that the game is not attractive from a practical standpoint, and I would not recommend investing based on the low likelihood of success.</p>
 </section>
 <section id="modified-strategy-bet-exactly-25-each-round" class="level3">
 <h3 class="anchored" data-anchor-id="modified-strategy-bet-exactly-25-each-round">5) Modified Strategy (Bet Exactly 25% Each Round)</h3>
 <p>Instead of having the full balance at risk with each coin flip, assume only 25% of your balance is gambled each year. Compare this modified strategy to the original game: Which is riskier? Which has better upside? Which strategy would you recommend and why?</p>
+<div id="78d863e8" class="cell" data-execution_count="7">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/cell-8-output-1.png" width="1141" height="470" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>When only 25% of the balance is risked each round, the outcomes become much more stable. This strategy results in a higher likelihood of finishing above the initial investment (about 71%) and a more consistent final balance. Although the original strategy offers greater upside, the modified approach reduces risk and produces more reliable outcomes, making it the preferable choice.</p>
 </section>
 <section id="the-kelly-criterion" class="level3">
 <h3 class="anchored" data-anchor-id="the-kelly-criterion">6) The Kelly Criterion</h3>
 <p>Explain what the Kelly Criterion is and how it relates to the modified strategy from Section 5. Does the Kelly Criterion support your recommendation?</p>
+<p>The Kelly Criterion is a rule for deciding how much of your wealth to risk in a repeated gamble in order to maximize long-term growth. Instead of betting the entire balance, it recommends betting only a fraction of your capital based on the odds and payoff. This idea is similar to the modified strategy in Section 5, where only 25% of the balance is exposed each round rather than the full account. Limiting the fraction at risk reduces volatility and helps avoid large losses that can damage long-term growth. Therefore, the Kelly Criterion supports the modified strategy and reinforces the recommendation to avoid betting the entire balance each round.</p>
 </section>
 </section>
 <section id="professional-presentation" class="level2">
@@ -339,13 +373,14 @@ Figure&nbsp;1: Generative DAG model for the investment game showing how wealth e
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
